@@ -21,6 +21,7 @@ struct ContentView: View {
             CustomLetterBox(color: .gray, text: letter)
                 .onTapGesture {
                     let position = alphabet.index(alphabet.startIndex, offsetBy: counter)
+                    letter = String(alphabet[position])
                     counter += 1
                     if counter == alphabet.count {
                         counter = 0
